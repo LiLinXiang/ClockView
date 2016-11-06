@@ -24,7 +24,7 @@ public class MyView extends View {
     private float mCanvasRotateX = 0;
     private float mCanvasRotateY = 0;
     // 表盘最大变换度
-    private float mCanvasMaxRotateDegree = 20;
+    private float mCanvasMaxRotateDegree = Dp2Px(getContext(), 5);
     // 圆心坐标
     private float x, y;
     // 圆半径
@@ -49,7 +49,7 @@ public class MyView extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         x = getMeasuredWidth() / 2;
         y = getMeasuredHeight() / 2;
-        r = x - 5 - Dp2Px(getContext(), 10);
+        r = x - 5 - Dp2Px(getContext(), 15);
     }
 
     @Override
